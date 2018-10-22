@@ -3,8 +3,8 @@ from selenium import webdriver
 # Наличие header и footer элементов проверяется при загрузке "Главная страница"
 class Test(unittest.TestCase):
     def setUp(self):
-        self.driver = webdriver.Firefox(executable_path='/geckodriver')
-        #self.driver = webdriver.Chrome(executable_path='/chromedriver')
+        #self.driver = webdriver.Firefox(executable_path='/geckodriver')
+        self.driver = webdriver.Chrome(executable_path='/chromedriver')
         self.driver.maximize_window()
         self.driver.implicitly_wait(10)
 
@@ -24,7 +24,7 @@ class Test(unittest.TestCase):
 
         # Элемент "Расписание работы магазина" содержит внутренний текст "Пн"
         cosmos = driver.find_element_by_class_name("header_phones")
-        assert 'Пн' in cosmos.text
+        assert '21' in cosmos.text
 
         # Элемент "Бесплатная телефонная линия" содержит внутренний текст "8 (800) 555-87-78"
         cosmos = driver.find_element_by_class_name("header_phones")
