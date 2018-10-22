@@ -14,7 +14,8 @@ class Test(unittest.TestCase):
         #driver.get("http://test1.techport.ru/")
 
         cosmos = driver.find_element_by_class_name("header_phones")
-        assert '8 (495) 228-66-69' in cosmos.text
+        assert '8 (800) 555-87-78 (бесплатно)' in cosmos.text
+
 
         # Элемент "Телефон города" содержит внутренний текст "8(495)228-66-69"
 
