@@ -23,35 +23,35 @@ class Test(unittest.TestCase):
         assert '8 (495) 228-66-69' in cosmos.text
 
         # Элемент "Расписание работы магазина" содержит внутренний текст "Пн"
-        cosmos = driver.find_element_by_class_name("header_phones")
-        assert '' in cosmos.text
+        #cosmos = driver.find_element_by_class_name("header_phones")
+        assert 'Пн' in cosmos.text
 
         # Элемент "Бесплатная телефонная линия" содержит внутренний текст "8 (800) 555-87-78"
-        cosmos = driver.find_element_by_class_name("header_phones")
+        #cosmos = driver.find_element_by_class_name("header_phones")
         assert '8 (800) 555-87-78' in cosmos.text
 
         # Элемент "Поле поиска" отображается на странице
         driver.find_element_by_xpath("//*[@id='desktop_search_input']").is_displayed()
 
         # Элемент "Ссылка на ВКонтакте" отображается на странице
-        cosmos = driver.find_element_by_xpath("/html/body/div[2]/div[2]/main/div[9]/div/div/div[1]/div")
-        assert 'Вконтакте' in cosmos.text
+        cosmos1 = driver.find_element_by_xpath("/html/body/div[2]/div[2]/main/div[9]/div/div/div[1]/div")
+        assert 'Вконтакте' in cosmos1.text
 
         # Элемент "Ссылка на Одноклассники" отображается на странице
-        cosmos = driver.find_element_by_xpath("/html/body/div[2]/div[2]/main/div[9]/div/div/div[2]/div")
-        assert 'Одноклассники' in cosmos.text
+        cosmos2 = driver.find_element_by_xpath("/html/body/div[2]/div[2]/main/div[9]/div/div/div[2]/div")
+        assert 'Одноклассники' in cosmos2.text
 
         # Элемент "Ссылка на Facebook" отображается на странице
-        cosmos = driver.find_element_by_xpath("/html/body/div[2]/div[2]/main/div[9]/div/div/div[3]/div")
-        assert 'Facebook' in cosmos.text
+        cosmos3 = driver.find_element_by_xpath("/html/body/div[2]/div[2]/main/div[9]/div/div/div[3]/div")
+        assert 'Facebook' in cosmos3.text
 
         # Элемент "Ссылка на Twitter" отображается на странице
-        cosmos = driver.find_element_by_xpath("/html/body/div[2]/div[2]/main/div[9]/div/div/div[4]/div")
-        assert 'Twitter' in cosmos.text
+        cosmos4 = driver.find_element_by_xpath("/html/body/div[2]/div[2]/main/div[9]/div/div/div[4]/div")
+        assert 'Twitter' in cosmos4.text
 
         # Элемент "Ссылка на Instagram" отображается на странице
-        cosmos = driver.find_element_by_xpath("/html/body/div[2]/div[2]/main/div[9]/div/div/div[5]/div")
-        assert 'Instagram' in cosmos.text
+        cosmos5 = driver.find_element_by_xpath("/html/body/div[2]/div[2]/main/div[9]/div/div/div[5]/div")
+        assert 'Instagram' in cosmos5.text
 
 
 
