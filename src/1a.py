@@ -14,9 +14,9 @@ class Test(unittest.TestCase):
         #driver.get("http://test1.techport.ru/")
 
         # Элемент "Телефон города" содержит внутренний текст "8(495)228-66-69"
-        self.assertTrue("8 (495) 228-66-69" , driver.find_element_by_class_name("header_phones").text)
-        self.assertTrue("Пн-Пт 9–21, Сб-Вс 9–20", driver.find_element_by_class_name("header_phones").text)
-        self.assertTrue("8 (800) 555-87-78", driver.find_element_by_class_name("header_phones").text)
+        self.assertEquals("8 (495) 228-66-69 Пн-Пт 9–21, Сб-Вс 9–20 8 (800) 555-87-78 (бесплатно)" , driver.find_element_by_class_name("header_phones").text)
+        #self.assertTrue("Пн-Пт 9–21, Сб-Вс 9–20", driver.find_element_by_class_name("header_phones").text)
+        #self.assertTrue("8 (800) 555-87-78", driver.find_element_by_class_name("header_phones").text)
 
 
 
