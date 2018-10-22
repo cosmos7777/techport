@@ -1,7 +1,7 @@
 import unittest
 from selenium import webdriver
 #  Проверка выпадающего меню "Все категории" и производителей сайта
-# test18 Проверка выпадаюдего меню, раздел "Сантехника", Поставщики Roca, Blanco отображаются и кликабельны
+# test19 Проверка выпадаюдего меню, раздел "Инструменты", Поставщик Makita, AEG отображаются и кликабельны
 class Test(unittest.TestCase):
     def setUp(self):
         #self.driver = webdriver.Firefox(executable_path='/geckodriver')
@@ -18,12 +18,11 @@ class Test(unittest.TestCase):
         cosmos = driver.find_element_by_id("menu-button")
         assert 'ВСЕ КАТЕГОРИИ' in cosmos.text
 
-        # Проверка выпадаюдего меню, раздел "Сантехника", Поставщики Roca, Blanco отображаются и кликабельны
-        driver.find_element_by_class_name("roca_button").is_displayed()
-        driver.find_element_by_class_name("blanco_button").is_displayed()
-        driver.find_element_by_class_name("roca_button").is_enabled()
-        driver.find_element_by_class_name("blanco_button").is_enabled()
-
+        # Проверка выпадаюдего меню, раздел "Инструменты", Поставщик Makita, AEG отображаются и кликабельны
+        driver.find_element_by_class_name("makita_button").is_displayed()
+        driver.find_element_by_class_name("aeg_button").is_displayed()
+        driver.find_element_by_class_name("makita_button").is_enabled()
+        driver.find_element_by_class_name("aeg_button").is_enabled()
 
 
 

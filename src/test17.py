@@ -1,7 +1,7 @@
 import unittest
 from selenium import webdriver
 #  Проверка выпадающего меню "Все категории" и производителей сайта
-# test17 Проверка выпадаюдего меню, раздел "Бытовая техника", Поставщик Bosch, LG
+# test17 Проверка выпадаюдего меню, раздел "Бытовая техника", Поставщики Bosch, LG и кликабельны
 class Test(unittest.TestCase):
     def setUp(self):
         #self.driver = webdriver.Firefox(executable_path='/geckodriver')
@@ -18,7 +18,7 @@ class Test(unittest.TestCase):
         cosmos = driver.find_element_by_id("menu-button")
         assert 'ВСЕ КАТЕГОРИИ' in cosmos.text
 
-        # Проверка выпадаюдего меню, раздел "Бытовая техника", Поставщик Bosch, LG
+        # Проверка выпадаюдего меню, раздел "Бытовая техника", Поставщики Bosch, LG отображаются и кликабельны
         driver.find_element_by_css_selector("a.bosch_button:nth-child(1)").is_displayed()
         driver.find_element_by_css_selector("#category-wrapper > div.tcp-category-content-list > div.tcp-category-content.block_item_1.tcp-category-content_active > div.tcp-category-content-body.body_with_icon_col > div > div.tcp-col.tcp-col_xs-3.tcp-col_icons > a.lg_button").is_displayed()
         driver.find_element_by_css_selector("a.bosch_button:nth-child(1)").is_enabled()
