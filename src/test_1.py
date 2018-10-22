@@ -23,12 +23,12 @@ class Test(unittest.TestCase):
         assert '8 (495) 228-66-69' in cosmos.text
 
         # Элемент "Расписание работы магазина" содержит внутренний текст "Пн"
-        #cosmos = driver.find_element_by_class_name("header_phones")
-        assert 'Пн' in cosmos.text
+        cosmos6 = driver.find_element_by_class_name("header_phones")
+        assert 'Пн' in cosmos6.text
 
         # Элемент "Бесплатная телефонная линия" содержит внутренний текст "8 (800) 555-87-78"
-        #cosmos = driver.find_element_by_class_name("header_phones")
-        assert '8 (800) 555-87-78' in cosmos.text
+        cosmos7 = driver.find_element_by_class_name("header_phones")
+        assert '8 (800) 555-87-78' in cosmos7.text
 
         # Элемент "Поле поиска" отображается на странице
         driver.find_element_by_xpath("//*[@id='desktop_search_input']").is_displayed()
