@@ -1,7 +1,7 @@
 import unittest
 from selenium import webdriver
 # Наличие header и footer элементов проверяется при загрузке "Главная страница"
-# test4 Элемент "Поле поиска" отображается на странице и кликабелен
+# test6 Элемент "Ссылка на Одноклассники" отображается на странице и кликабелен
 class Test(unittest.TestCase):
     def setUp(self):
         #self.driver = webdriver.Firefox(executable_path='/geckodriver')
@@ -13,11 +13,13 @@ class Test(unittest.TestCase):
     def test_header_footer(self):
         driver = self.driver
 
-        # Элемент "Поле поиска" отображается на странице и кликабелен
-        search = driver.find_element_by_xpath("//*[@id='desktop_search_input']")
-        self.assertTrue(search.is_displayed()and search.is_enabled())
+        # Элемент "Ссылка на Одноклассники" отображается на странице и кликабелен
+        ok = driver.find_element_by_xpath("/html/body/div[2]/div[2]/main/div[9]/div/div/div[2]/div")
+        self.assertTrue(ok.is_displayed()and ok.is_enabled())
 
-        #driver.find_element_by_xpath("//*[@id='desktop_search_input']").is_displayed()
+
+        #cosmos = driver.find_element_by_xpath("/html/body/div[2]/div[2]/main/div[9]/div/div/div[2]/div")
+        assert 'Одноклассники' in ok.text
 
         def tear_down(self):
             #self.driver.close()
