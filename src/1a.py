@@ -13,8 +13,9 @@ class Test(unittest.TestCase):
         driver = self.driver
         #driver.get("http://test1.techport.ru/")
 
-        cosmos = driver.find_element_by_class_name("header_phones")
-        assert '8 (800) 555-87-78 (бесплатно)' in cosmos.text
+        # Элемент "Ссылка на Одноклассники" отображается на странице
+        cosmos2 = driver.find_element_by_xpath("/html/body/div[2]/div[2]/main/div[9]/div/div/div[2]/div")
+        assert 'Одноклассники' in cosmos2.text
 
 
         # Элемент "Телефон города" содержит внутренний текст "8(495)228-66-69"
