@@ -15,7 +15,7 @@ class Test(unittest.TestCase):
         # Проверка логотипа Техпорт, сверху слева
         driver.find_element_by_xpath("/html/body/div[2]/div[2]/header/div[3]/div/div/a").is_displayed()
 
-        # Проверка элементы верхнего уровня Горож, Акции, Дисконт, Техбону и т.д. отборажаются
+        # Проверка элементы верхнего уровня Город, Акции, Дисконт, Техбону и т.д. отборажаются
         driver.find_element_by_xpath("/html/body/div[2]/div[2]/header/div[2]/div/div").is_displayed()
 
         # Элемент "Телефон города" содержит внутренний текст "8(495)228-66-69"
@@ -23,8 +23,9 @@ class Test(unittest.TestCase):
         assert '8 (495) 228-66-69' in cosmos.text
 
         # Элемент "Расписание работы магазина" содержит внутренний текст "Пн"
-        cosmos6 = driver.find_element_by_class_name("header_phones")
-        assert 'Пн' in cosmos6.text
+        #cosmos6 = driver.find_element_by_class_name("header_phones")
+        #assert cosmos.text == "y"
+        assert '9–20' in cosmos.text
 
         # Элемент "Бесплатная телефонная линия" содержит внутренний текст "8 (800) 555-87-78"
         cosmos7 = driver.find_element_by_class_name("header_phones")
