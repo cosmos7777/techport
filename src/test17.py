@@ -19,17 +19,10 @@ class Test(unittest.TestCase):
         assert 'ВСЕ КАТЕГОРИИ' in cosmos.text
 
         # Проверка выпадаюдего меню, раздел "Бытовая техника", Поставщик Bosch, LG
-        #driver.find_element_by_css_selector("a.bosch_button:nth-child(1)").is_displayed()
-        #driver.find_element_by_css_selector("#category-wrapper > div.tcp-category-content-list > div.tcp-category-content.block_item_1.tcp-category-content_active > div.tcp-category-content-body.body_with_icon_col > div > div.tcp-col.tcp-col_xs-3.tcp-col_icons > a.lg_button").is_displayed()
-        bt1 = driver.find_element_by_css_selector("a.bosch_button:nth-child(1)")
-        self.assertTrue(bt1.is_displayed()and bt1.is_enabled())
-        bt2 = driver.find_element_by_css_selector("#category-wrapper > div.tcp-category-content-list > div.tcp-category-content.block_item_1.tcp-category-content_active > div.tcp-category-content-body.body_with_icon_col > div > div.tcp-col.tcp-col_xs-3.tcp-col_icons > a.lg_button")
-        self.assertTrue(bt2.is_displayed() and bt2.is_enabled())
-
-
-
-
-
+        driver.find_element_by_css_selector("a.bosch_button:nth-child(1)").is_displayed()
+        driver.find_element_by_css_selector("#category-wrapper > div.tcp-category-content-list > div.tcp-category-content.block_item_1.tcp-category-content_active > div.tcp-category-content-body.body_with_icon_col > div > div.tcp-col.tcp-col_xs-3.tcp-col_icons > a.lg_button").is_displayed()
+        driver.find_element_by_css_selector("a.bosch_button:nth-child(1)").is_enabled()
+        driver.find_element_by_css_selector("#category-wrapper > div.tcp-category-content-list > div.tcp-category-content.block_item_1.tcp-category-content_active > div.tcp-category-content-body.body_with_icon_col > div > div.tcp-col.tcp-col_xs-3.tcp-col_icons > a.lg_button").is_enabled()
 
         def tear_down(self):
             #self.driver.close()
