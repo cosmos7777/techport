@@ -16,7 +16,7 @@ class Test(unittest.TestCase):
         driver = self.driver
         driver.get("http://test1.techport.ru/katalog/products/holodilniki/dvuhkamernye/holodilnik-atlant-4008-020")
         #driver.find_element_by_xpath("/html/body/div[2]/div[2]/main/div[2]/div[1]/div/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/table/tbody/tr[13]/td/a").click()
-        driver.find_element_by_link_text("Все характеристики").click()
+        driver.find_element_by_css_selector("#page-section > div.item_wrapp > div.item_info > div > div.tcp-product.tcp-product_single.tcp-product_no_radius > div:nth-child(2) > div.tcp-col.tcp-col_lg-3.tcp-visible-lg > div.tcp-product-detail.tcp-product-detail_full.tcp-product-detail_bordered > div.tcp-product-detail__item.tcp-product-detail__item_pad-xs > div.tcp-product-specification.tcp-product-specification_inline > table > tbody > tr:nth-child(13) > td > a").click()
 
         cos = driver.find_element_by_xpath("/html/body/div[2]/div[2]/main/div[2]/div[3]/div/div/div[1]/div[1]/div/div[2]/div/table/tbody/tr[1]/td[1]")
         assert 'Общий полезный объем' in cos.text
