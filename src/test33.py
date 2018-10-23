@@ -16,11 +16,11 @@ class LoginTest(unittest.TestCase):
         driver = self.driver
         driver.get("http://test1.techport.ru/katalog/products/holodilniki/dvuhkamernye/holodilnik-atlant-4008-020")
         # Нажимаем купить в 1 клик
-        #driver.find_element_by_css_selector("div.tcp-product-body:nth-child(6) > div:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(1)").click()
+        driver.find_element_by_css_selector("#page-section > div.item_wrapp > div.item_info > div > div.tcp-product.tcp-product_single.tcp-product_no_radius > div:nth-child(2) > div.tcp-col.tcp-col_lg-3.tcp-visible-lg > div.tcp-product-detail.tcp-product-detail_full.tcp-product-detail_bordered > div.tcp-product-detail__item.tcp-product-detail__item_pad-xs > div.tcp-product-specification.tcp-product-specification_inline > table > tbody > tr:nth-child(13) > td > a").click()
 
-        driver.find_element_by_xpath("/html/body/div[2]/div[2]/main/div[2]/div[1]/div/div[1]/div[2]/div[3]/div[6]/div/div/ul/li[1]/a/span[2]").click()
+        #driver.find_element_by_xpath("//*[@id=page-section]/div[2]/div[1]/div/div[1]/div[2]/div[2]/div[1]/div[1]/div[2]/table/tbody/tr[13]/td/a").click()
         # Заголовок "Купить в 1 клик" отображается
-        driver.find_element_by_xpath("/html/body/div[2]/noindex/div/div[4]/div/div[1]/div/div/div/h1").is_displayed()
+        driver.find_element_by_id("icon-modal-content").is_displayed()
 
 
 
