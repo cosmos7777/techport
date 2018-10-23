@@ -70,7 +70,7 @@ class LoginTest(unittest.TestCase):
         name.send_keys("gevorkov")
         # Заполняем Пароль
         pas = driver.find_element_by_id("gwt-uid-5")
-        pas.send_keys("Manchester23")
+        pas.send_keys("")
         # Нажимаем "Войти"
         driver.find_element_by_xpath("/html/body/div[1]/div/div[2]/div/div/div/div/div/div/div[2]/div/div/div/div[2]/div[7]/div").click()
 
