@@ -6,7 +6,7 @@ class Test(unittest.TestCase):
       self.driver = webdriver.Firefox(executable_path='/geckodriver')
       #self.driver = webdriver.Chrome(executable_path='/chromedriver')
       self.driver.maximize_window()
-      self.driver.implicitly_wait(10)
+      self.driver.implicitly_wait(30)
 
 
 
