@@ -21,8 +21,7 @@ class Test(unittest.TestCase):
         driver.find_element_by_xpath("/html/body/div[2]/div[2]/main/div[2]/div[1]/div/div[1]/div[2]/div[1]/div[1]/div[1]/div[1]/a").click()
         # Элемент главной фотографии отображается и работает
         driver.find_element_by_xpath("/html/body/div[2]/div[2]/main/div[2]/div[1]/div/div[1]/div[2]/div[1]/div[1]/div[1]").is_displayed()
-        #driver.find_element_by_xpath("/html/body/div[2]/div[2]/main/div[2]/div[1]/div/div[1]/div[2]/div[1]/div[1]/div[2]/div[3]").is_displayed()
-        #driver.find_element_by_xpath("/html/body/div[2]/div[2]/main/div[2]/div[1]/div/div[1]/div[2]/div[1]/div[1]/div[2]/div[3]").is_enabled()
+
 
 
     def tear_down(self):
