@@ -17,8 +17,8 @@ class Test(unittest.TestCase):
         driver.get("http://test1.techport.ru/katalog/products/holodilniki")
         # кликаем на фильтр "глубина" и выставляем значени 56 и 62
 
-        #driver.find_element_by_id("tpf-227").click()
-        driver.find_element_by_css_selector("#tpf-227 > div.tcp-filters__title").click()
+        driver.find_element_by_id("tpf-227").click()
+
         #driver.find_element_by_xpath("/html/body/div[2]/div[2]/main/div[2]/div/div/div[1]/div/form/div[3]/div/div[7]/div[1]").click()
         form1 = driver.find_element_by_xpath("/html/body/div[2]/div[2]/main/div[2]/div/div/div[1]/div/form/div[3]/div/div[7]/div[2]/div/div[1]/div/input")
         form2 = driver.find_element_by_xpath("/html/body/div[2]/div[2]/main/div[2]/div/div/div[1]/div/form/div[3]/div/div[7]/div[2]/div/div[2]/div/input")
