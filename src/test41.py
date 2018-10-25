@@ -17,7 +17,7 @@ class Test(unittest.TestCase):
         driver = self.driver
         driver.get("http://test1.techport.ru/katalog/products/holodilniki")
         # кликаем на фильтр "глубина" и выставляем значени 56 и 62
-        driver.find_element_by_css_selector("#tpf-227 > div:nth-child(1)").click()
+        driver.find_element_by_css_selector("#tpf-227>div:nth-child(1)").click()
 
 
         #driver.find_element_by_css_selector("div#tpf-227 > div").click()
