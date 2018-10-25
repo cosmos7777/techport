@@ -47,16 +47,7 @@ class LoginTest(unittest.TestCase):
         driver.find_element_by_id("to_finish_checkout").click()
 
         # Проверяем что заказ оформлен, появляется надпись "Ваш заказ ... принят".
-        nom = driver.find_element_by_xpath("/html/body/div[2]/div[2]/main/div/div/div/div/div/div/div[1]/div")
-        nom.is_displayed()
-
-
-
-
-
-
-
-
+        element = driver.find_element_by_xpath("/html/body/div[2]/div[2]/main/div/div/div/div/div/div/div[1]/div").text
 
 
 
@@ -70,16 +61,17 @@ class LoginTest(unittest.TestCase):
         name.send_keys("gevorkov")
         # Заполняем Пароль
         pas = driver.find_element_by_id("gwt-uid-5")
-        pas.send_keys("")
+        pas.send_keys("Manchester23")
         # Нажимаем "Войти"
         driver.find_element_by_xpath("/html/body/div[1]/div/div[2]/div/div/div/div/div/div/div[2]/div/div/div/div[2]/div[7]/div").click()
 
         # Вносим номер заказа в поле "Заказ №"
         zakaz = driver.find_element_by_xpath("/html/body/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div/div[1]/div/div/div[1]/div/div[12]/input")
-        zakaz.send_keys("TP8923")
+        zakaz.send_keys(element)
 
-        # Выбираем заказ
-        driver.find_element_by_xpath("/html/body/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[2]/div/div/div/div/div[2]/div[1]/table/tbody/tr[1]/td[1]/div").is_selected()
+
+
+
 
 
 

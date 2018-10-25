@@ -6,8 +6,8 @@ from selenium import webdriver
 class Test(unittest.TestCase):
     def setUp(self):
 
-        #self.driver = webdriver.PhantomJS(executable_path='/phantomjs')
-        self.driver = webdriver.Chrome(executable_path='/chromedriver')
+        self.driver = webdriver.PhantomJS(executable_path='/phantomjs')
+        #self.driver = webdriver.Chrome(executable_path='/chromedriver')
         self.driver.maximize_window()
         self.driver.implicitly_wait(10)
 
