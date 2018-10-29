@@ -11,7 +11,7 @@ class Test(unittest.TestCase):
 
 
 
-    def test_user_login4(self):
+    def test(self):
         # Положительный сценарий, заполнено оба поля
         driver = self.driver
         # Загружаем страницу входа, и воодим логин,пароль
@@ -29,7 +29,8 @@ class Test(unittest.TestCase):
         # assert user_mail.text == "Andrey"
 
         # Заходим в свой личный кабинет
-        driver.find_element_by_class_name("tcp-user-preview__name").click()
+        driver.find_element_by_class_name("tcp-user-preview__icon").click()
+        #driver.find_element_by_class_name("tcp-user-preview__name").click()
         # кликаем на "мои данные"
         driver.find_element_by_css_selector("a.tcp-user-menu__item:nth-child(1) > span:nth-child(1)").click()
         # нажимаем "редактировать"
