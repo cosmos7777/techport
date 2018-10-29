@@ -10,7 +10,7 @@ class Test(unittest.TestCase):
 
     # Покупка товара в окне товара
 
-    def test1(self):
+    def test(self):
         driver = self.driver
         driver.get("http://test1.techport.ru/katalog/products/holodilniki/dvuhkamernye/holodilnik-atlant-4008-020")
         # прибавляем кол-во товара нажимая "+"
@@ -19,8 +19,7 @@ class Test(unittest.TestCase):
         # Нажимаем купить
         driver.find_element_by_id("item_button_buy").click()
         # Нажимаем "оформить заказ"
-        driver.find_element_by_css_selector(
-            "#order-basket > div > div.tcp-row > div.tcp-col.tcp-col_lg-4-5 > div > div.tcp-content-section > div > div:nth-child(1) > div > a").click()
+        driver.find_element_by_css_selector("#order-basket > div > div.tcp-row > div.tcp-col.tcp-col_lg-4-5 > div > div.tcp-content-section > div > div:nth-child(1) > div > a").click()
         # Нажимаем оформить
         driver.find_element_by_xpath("/html/body/div[2]/div[2]/main/div[1]/form/div/div/div[2]/div/a").click()
 
