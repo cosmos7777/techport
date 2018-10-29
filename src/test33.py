@@ -22,7 +22,8 @@ class LoginTest(unittest.TestCase):
 
 
         #driver.find_element_by_link_text("Купить в 1 клик").click()
-        driver.find_element_by_class_name("tcp-list-group__icon").click()
+        #driver.find_element_by_class_name("tcp-list-group__icon").click()
+        driver.find_element_by_xpath("/html/body/div[2]/div[2]/main/div[2]/div[1]/div/div[1]/div[2]/div[3]/div[6]/div/div/ul/li[1]").click()
 
 
 
