@@ -18,7 +18,11 @@ class LoginTest(unittest.TestCase):
         driver = self.driver
         driver.get("http://test1.techport.ru/katalog/products/holodilniki/dvuhkamernye/holodilnik-atlant-4008-020")
         # Нажимаем купить в 1 клик
-        driver.find_element_by_link_text("Купить в 1 клик").click()
+
+
+
+        #driver.find_element_by_link_text("Купить в 1 клик").click()
+        driver.find_element_by_class_name("tcp-list-group__icon").click()
 
 
 
