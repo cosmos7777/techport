@@ -1,7 +1,7 @@
 import unittest
 from selenium import webdriver
 # повторный test34 Проверка покупки товара, покупка товара в окне товара, полный цикл
-class LoginTest(unittest.TestCase):
+class Test(unittest.TestCase):
     def setUp(self):
       #self.driver = webdriver.Firefox(executable_path='/geckodriver')
       self.driver = webdriver.Chrome(executable_path='/chromedriver')

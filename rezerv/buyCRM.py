@@ -1,5 +1,6 @@
 import unittest
 from selenium import webdriver
+from selenium.webdriver.common.action_chains import ActionChains
 # test33 Проверка покупки товара, покупка товара в окне товара
 class LoginTest(unittest.TestCase):
     def setUp(self):
@@ -45,9 +46,10 @@ class LoginTest(unittest.TestCase):
         driver.find_element_by_xpath("/html/body/div[2]/div[2]/main/div/div[2]/form/div/div[1]/div[3]/div/div[2]/div[1]/div[1]/label").click()
         # Нажимаем Оформить
         driver.find_element_by_id("to_finish_checkout").click()
-
+        import re
         # Проверяем что заказ оформлен, появляется надпись "Ваш заказ ... принят".
         element = driver.find_element_by_xpath("/html/body/div[2]/div[2]/main/div/div/div/div/div/div/div[1]/div").text
+        result = re.findall(r'[^P]\S\d', element)
 
 
 
@@ -67,7 +69,20 @@ class LoginTest(unittest.TestCase):
 
         # Вносим номер заказа в поле "Заказ №"
         zakaz = driver.find_element_by_xpath("/html/body/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div/div[1]/div/div/div[1]/div/div[12]/input")
-        zakaz.send_keys(element)
+        zakaz.send_keys(result)
+
+        # находим наш заказ
+        driver.find_element_by_xpath("/html/body/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[1]/div/div[2]/div/div/div[5]/div").click()
+
+        # выбираем наш заказ и кликаем два раза
+        el = driver.find_element_by_xpath("/html/body/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[2]/div/div/div/div/div[2]/div[1]/table/tbody/tr/td[3]/div")
+        actionchains = ActionChains(driver)
+        actionchains.double_click(el).perform()
+
+        # Сверяем название товара "Холодильник" в заказе
+        hol = driver.find_element_by_xpath("/html/body/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[2]/div/div/div/div/div/div/div[2]/div/div/div[1]/div/div/div[2]/div/div[2]/div[1]/table/tbody/tr/td[3]/div/div")
+        assert 'Холодильник' in hol.text
+
 
 
 

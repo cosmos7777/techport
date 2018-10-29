@@ -1,7 +1,7 @@
 import unittest
 from selenium import webdriver
 # test48 Проверка входа логина и пароля личного кабинета, Положительный сценарий, заполнено оба поля, редактирование личных данных
-class LoginTest(unittest.TestCase):
+class Test(unittest.TestCase):
     def setUp(self):
         #self.driver = webdriver.Firefox(executable_path='/geckodriver')
         self.driver = webdriver.Chrome(executable_path='/chromedriver')
