@@ -14,8 +14,7 @@ class Test(unittest.TestCase):
         driver = self.driver
         driver.get("http://test1.techport.ru/katalog/products/holodilniki/dvuhkamernye/holodilnik-atlant-4008-020")
         # прибавляем кол-во товара нажимая "+"
-        driver.find_element_by_xpath(
-            "/html/body/div[2]/div[2]/main/div[2]/div[1]/div/div[1]/div[2]/div[3]/div[1]/div[2]/form/div/div[1]/div/div[3]/button").click()
+        driver.find_element_by_xpath("/html/body/div[2]/div[2]/main/div[2]/div[1]/div/div[1]/div[2]/div[3]/div[1]/div[2]/form/div/div[1]/div/div[3]/button").click()
         # Нажимаем купить
         driver.find_element_by_id("item_button_buy").click()
         # Нажимаем "оформить заказ"
@@ -33,18 +32,15 @@ class Test(unittest.TestCase):
         name = driver.find_element_by_id("order_phone")
         name.send_keys("9011111111")
         # Нажимаем "Продолжить"
-        driver.find_element_by_xpath(
-            "/html/body/div[2]/div[2]/main/div/div[2]/form/div/div[1]/div[3]/div/button").click()
+        driver.find_element_by_xpath("/html/body/div[2]/div[2]/main/div/div[2]/form/div/div[1]/div[3]/div/button").click()
 
         # Выбираемм способ получения "В пункте выдачи"
-        driver.find_element_by_xpath(
-            "/html/body/div[2]/div[2]/main/div/div[2]/form/div/div[1]/div[2]/div/div[2]/div[2]/label").click()
+        driver.find_element_by_xpath("/html/body/div[2]/div[2]/main/div/div[2]/form/div/div[1]/div[2]/div/div[2]/div[2]/label").click()
         # Нажимаем "Продолжить"
         driver.find_element_by_id("button_step_2").click()
 
         # Выбираем способ оплаты "При получении"
-        driver.find_element_by_xpath(
-            "/html/body/div[2]/div[2]/main/div/div[2]/form/div/div[1]/div[3]/div/div[2]/div[1]/div[1]/label").click()
+        driver.find_element_by_xpath("/html/body/div[2]/div[2]/main/div/div[2]/form/div/div[1]/div[3]/div/div[2]/div[1]/div[1]/label").click()
         # Нажимаем Оформить
         driver.find_element_by_id("to_finish_checkout").click()
 
