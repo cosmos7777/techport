@@ -1,7 +1,7 @@
 import unittest
 from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains
-# test33 Проверка покупки товара, покупка товара в окне товара
+# test50 Проверка покупки товара, покупка товара в окне товара, полный цикла,проверка в CRM заказа
 class LoginTest(unittest.TestCase):
     def setUp(self):
       #self.driver = webdriver.Firefox(executable_path='/geckodriver')
