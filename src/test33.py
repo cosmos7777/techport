@@ -21,10 +21,12 @@ class LoginTest(unittest.TestCase):
 
 
 
-        #driver.find_element_by_link_text("Купить в 1 клик").click()
+
+
+        driver.find_element_by_link_text("Купить в 1 клик").click()
         #driver.find_element_by_class_name("tcp-list-group__icon").click()
         #driver.find_element_by_css_selector("div.tcp-product-body:nth-child(6) > div:nth-child(1) > div:nth-child(1) > ul:nth-child(1) > li:nth-child(1)").click()
-        driver.find_element_by_css_selector("#page-section > div.item_wrapp > div.item_info > div > div.tcp-product.tcp-product_single.tcp-product_no_radius > div:nth-child(2) > div.tcp-col.tcp-col_md-4.tcp-col_lg-3.tcp-right-block > div:nth-child(6) > div > div > ul > li:nth-child(1)").click()
+        #driver.find_element_by_css_selector("#page-section > div.item_wrapp > div.item_info > div > div.tcp-product.tcp-product_single.tcp-product_no_radius > div:nth-child(2) > div.tcp-col.tcp-col_md-4.tcp-col_lg-3.tcp-right-block > div:nth-child(6) > div > div > ul > li:nth-child(1)").click()
 
 
 
